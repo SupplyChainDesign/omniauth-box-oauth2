@@ -18,10 +18,6 @@ module OmniAuth
       }
       option :check_direct_link_support, false
 
-      def callback_url
-        super.sub('http:', 'https:')
-      end
-
       def request_phase
         super
       end
