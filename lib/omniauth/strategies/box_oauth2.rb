@@ -4,6 +4,8 @@ module OmniAuth
   module Strategies
     class BoxOAuth2 < OmniAuth::Strategies::OAuth2
       option :name, 'box_oauth2'
+      option :authorize_options, [:scope, :state]
+
       option :client_options, {
         :site => 'https://api.box.com/2.0',
         :authorize_url => 'https://api.box.com/oauth2/authorize',
